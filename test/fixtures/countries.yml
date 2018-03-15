@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  size: 1
+  population: 1
+  capital: MyString
+  leader_id: 1
+
+two:
+  name: MyString
+  size: 1
+  population: 1
+  capital: MyString
+  leader_id: 1
