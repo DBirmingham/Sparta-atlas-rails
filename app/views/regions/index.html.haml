@@ -18,9 +18,6 @@
 				%td= r.food
 				%td= r.desc
 				%td= r.country.name
-				%td<
-					%button{:type => "button"} #{link_to 'Show', r, class: 'genLink'}
-				%td<
-					%button{:type => "button"} #{link_to 'Edit', edit_region_path(r), class: 'genLink'}
-				%td<
-					%button{:type => "button"} #{link_to 'Destroy', r, method: :delete, data: {confirm: 'Are you sure?'}, class: 'genLink'}
+				%td #{link_to 'Show', r, class: 'genLink'}
+				%td #{link_to 'Edit', edit_region_path(r), class: 'genLink'}
+				%td #{link_to 'Destroy', r, method: :delete, data: {confirm: 'Are you sure?'}, class: 'genLink'}

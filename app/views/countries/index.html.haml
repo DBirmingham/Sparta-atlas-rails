@@ -8,6 +8,7 @@
 		%th Size
 		%th Population
 		%th Capital
+		%th Leader
 		%th
 		%th
 		%th
@@ -18,9 +19,7 @@
 				%td #{c.size}km2
 				%td= c.population
 				%td= c.capital
-				%td<
-					%button{:type => "button"} #{link_to 'Show', c, class: 'genLink'}
-				%td<
-					%button{:type => "button"} #{link_to 'Edit', edit_country_path(c), class: 'genLink'}
-				%td<
-					%button{:type => "button"} #{link_to 'Destroy', c, method: :delete, data: {confirm: 'Are you sure?'}, class: 'genLink'}
+				%td= c.leader.name
+				%td #{link_to 'Show', c, class: 'genLink'}
+				%td #{link_to 'Edit', edit_country_path(c), class: 'genLink'}
+				%td #{link_to 'Destroy', c, method: :delete, data: {confirm: 'Are you sure?'}, class: 'genLink'}

@@ -22,12 +22,15 @@ th{
 	height: 3em;
 	text-align: center
 }
-.tableLinks:hover{
-	background: #f5f5f5
+button:hover{
+	background: #c5ffc5
 }
 .genLink, .genLink:visited{
 	text-decoration:none;
 	color: green
+}
+.genLink:hover{
+	background: #c5ffc5
 }
 span{
 	margin:0;
