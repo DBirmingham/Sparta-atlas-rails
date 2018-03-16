@@ -1,0 +1,10 @@
+= form_for(@region) do |f| 
+	%p= f.label :name
+	= f.text_field :name
+	%p= f.label :food
+	= f.text_field :food
+	%p= f.label :description
+	= f.text_field :desc
+	%p= f.label :country
+	= collection_select(:region, :country_id, Country.all, :id, :name, prompt: true)
+	=f.submit

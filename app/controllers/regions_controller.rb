@@ -30,6 +30,6 @@ class RegionsController < ApplicationController
 		redirect_to(regions_path)
 	end
 	def region_params
-		params.require(:region).permit(:name, :food, :desc, country_id:)
+		params.require(:region).permit(:name, :food, :desc, :country_id)
 	end
 end

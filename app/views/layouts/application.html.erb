@@ -9,6 +9,14 @@
   </head>
 
   <body>
+  	<nav>
+  		<ul>
+        <li><%=link_to 'Home', root_path, class: 'genLink'%></li>
+  			<li><%=link_to 'Leaders', leaders_path, class: 'genLink'%></li>
+  			<li><%=link_to 'Countries', countries_path, class: 'genLink'%></li>
+  			<li><%=link_to 'Regions', regions_path, class: 'genLink'%></li>
+  		</ul>
+  	</nav>
     <%= yield %>
   </body>
 </html>

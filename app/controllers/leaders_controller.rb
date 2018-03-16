@@ -9,8 +9,6 @@ class LeadersController < ApplicationController
 		@leader = Leader.new(leader_params)
 		if(@leader.save)
 			redirect_to(leaders_path)
-		else
-			render action: :new
 		end
 	end
 	def new

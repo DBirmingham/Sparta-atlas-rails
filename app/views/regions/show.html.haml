@@ -1,0 +1,7 @@
+%h1=@region.name
+%p Some basic stats about #{@region.name}
+
+%p Famous food : #{@region.food}
+%p Description  : #{@region.desc}
+%p Its leader is #{link_to @region.country.leader.name, @region.country.leader, class: 'genLink'}
+%p It's found within #{link_to @region.country.name, @region.country, class: 'genLink'}
