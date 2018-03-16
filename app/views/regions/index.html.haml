@@ -1,0 +1,23 @@
+%h1 Regions
+%p Here's a list of regions
+%button{:type => "button"} #{link_to 'Add Region', new_region_path, class: 'genLink'}
+
+%table
+	%thead
+		%th Name
+		%th Famous Food
+		%th Description
+		%th Country
+		%th
+		%th
+		%th
+	%body
+		- @region.each do |r|
+			%tr
+				%td= r.name
+				%td= r.food
+				%td= r.desc
+				%td= r.country.name
+				%td #{link_to 'Show', r, class: 'genLink'}
+				%td #{link_to 'Edit', edit_region_path(r), class: 'genLink'}
+				%td #{link_to 'Destroy', r, method: :delete, data: {confirm: 'Are you sure?'}, class: 'genLink'}

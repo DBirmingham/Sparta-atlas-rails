@@ -1,0 +1,25 @@
+%h1 Countries
+%p Here's a list of some of the countries in our database, add as you please
+%button{:type => "button"} #{link_to 'Add Country', new_country_path, class: 'genLink'}
+
+%table
+	%thead
+		%th Name
+		%th Size
+		%th Population
+		%th Capital
+		%th Leader
+		%th
+		%th
+		%th
+	%body
+		- @country.each do |c|
+			%tr
+				%td= c.name
+				%td #{c.size}km2
+				%td= c.population
+				%td= c.capital
+				%td= c.leader.name
+				%td #{link_to 'Show', c, class: 'genLink'}
+				%td #{link_to 'Edit', edit_country_path(c), class: 'genLink'}
+				%td #{link_to 'Destroy', c, method: :delete, data: {confirm: 'Are you sure?'}, class: 'genLink'}

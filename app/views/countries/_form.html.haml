@@ -1,0 +1,12 @@
+= form_for(@country) do |f| 
+	%p= f.label :name
+	= f.text_field :name
+	%p= f.label :size
+	= f.text_field :size
+	%p= f.label :population
+	= f.text_field :population
+	%p= f.label :capital
+	= f.text_field :capital
+	%p= f.label :leader
+	= collection_select(:country, :leader_id, Leader.all, :id, :name, prompt: true)
+	=f.submit

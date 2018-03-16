@@ -1,0 +1,75 @@
+// Place all the styles related to the leaders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+	font-family: arial, sans-serif
+}
+body{
+	margin-top:100px;
+	margin-left:25%
+}
+li{
+	display: inline;
+	margin-right: 5px
+}
+table{
+
+}
+td, th{
+	border-bottom: 1px solid #eee
+}
+th{
+	height: 3em;
+	text-align: center
+}
+button:hover{
+	background: #c5ffc5
+}
+.genLink, .genLink:visited{
+	text-decoration:none;
+	color: green
+}
+.genLink:hover{
+	background: #c5ffc5
+}
+span{
+	margin:0;
+	padding:0;
+}
+.r{
+	-webkit-animation: rainbow 1s infinite;
+}
+.a{
+	-webkit-animation: rainbow 1s infinite;
+	animation-delay: 140ms
+}
+.i{
+	-webkit-animation: rainbow 1s infinite;
+	animation-delay: 280ms
+}
+.n{
+	-webkit-animation: rainbow 1s infinite;
+	animation-delay: 420ms
+}
+.b{
+	-webkit-animation: rainbow 1s infinite;
+	animation-delay: 560ms
+}
+.o{
+	-webkit-animation: rainbow 1s infinite;
+	animation-delay: 700ms
+}
+.w{
+	-webkit-animation: rainbow 1s infinite;
+	animation-delay: 840ms
+}
+
+@-webkit-keyframes rainbow{
+	14.3%{color: red;}
+	28.6%{color: orange;}
+	42.9%{color: yellow;}
+	57.2%{color: green;}
+	71.5%{color: blue;}	
+	85.8%{color: indigo;}
+	100%{color: violet;}
+}

@@ -1,0 +1,21 @@
+%h1 World Leaders
+%p Here's a list of some of the current world leaders, add as you please
+%button{:type => "button", class: "button"} #{link_to 'Add Leader', new_leader_path, class: 'genLink'}
+
+%table
+	%thead
+		%th Name
+		%th Age
+		%th Title
+		%th
+		%th
+		%th
+	%body
+		- @leader.each do |lead|
+			%tr
+				%td= lead.name
+				%td= lead.age
+				%td= lead.title
+				%td.tableLinks #{link_to 'Show', lead, class: 'genLink'}
+				%td.tableLinks #{link_to 'Edit', edit_leader_path(lead), class: 'genLink'}
+				%td.tableLinks #{link_to 'Destroy', lead, method: :delete, data: {confirm: 'Are you sure?'}, class: 'genLink'}

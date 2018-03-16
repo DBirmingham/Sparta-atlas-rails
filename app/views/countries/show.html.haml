@@ -1,0 +1,26 @@
+%h1=@country.name
+%p Some basic stats about #{@country.name}
+
+%p Size : #{@country.size}km2
+%p Population  : #{@country.population}
+%p Capital  : #{@country.capital}
+%p Its leader is #{link_to @country.leader.name, @country.leader, class: 'genLink'}
+
+%p Within #{@country.name} you will find
+%table
+	%thead
+		%th Region
+		%th Famous Food
+		%th Description
+		%th
+		%th
+	%body
+		- @country.regions.each do |r|
+			%tr
+				%td= r.name
+				%td= r.food
+				%td= r.desc
+				%td
+					%button{:type => "button"} #{link_to 'Show', r, class: 'genLink'}
+				%td
+					%button{:type => "button"} #{link_to 'Edit', edit_country_path(r), class: 'genLink'}
